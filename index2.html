@@ -32,26 +32,26 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <style media="screen">
-    header, main, footer {
+    header, main, footer,.page-content,.navbar{
     padding-left: 300px;
+
   }
-  .container{
-    padding-left: 300px;
-  }
+
   @media only screen and (max-width : 992px) {
-    header, main, footer {
+    header, main, footer,.page-content,.navbar {
       padding-left: 0;
     }
   }
+
   </style>
 
 </head>
 
 <body>
 
-  <nav>
+  <nav class="navbar">
     <div class="nav-wrapper teal lighten-2">
-      <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+      <a href="#" data-activates="slide-out" class="button-collapse "><i class="material-icons">menu</i></a>
 
       <a href="#" class="brand-logo">GIT I & E</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -81,7 +81,8 @@
     </li>
     <li><a class="waves-effect" href="#!"><i class="material-icons">people</i>About Us</a></li>
   </ul>
-  <div class="container">
+
+  <div class="page-content">
     <div class="">
       some
     </div>
