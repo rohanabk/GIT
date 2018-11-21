@@ -32,18 +32,15 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <style media="screen">
-    header, main, footer,.page-content,.navbar{
+  header, main, footer,.page-content,.navbar{
     padding-left: 300px;
-
   }
-
   @media only screen and (max-width : 992px) {
     header, main, footer,.page-content,.navbar {
       padding-left: 0;
     }
   }
-
-  </style>
+</style>
 
 </head>
 
@@ -53,13 +50,13 @@
     <div class="nav-wrapper teal lighten-2">
       <a href="#" data-activates="slide-out" class="button-collapse "><i class="material-icons">menu</i></a>
 
-      <a href="#" class="brand-logo">GIT I & E</a>
+      <a href="#" class="brand-logo"> &nbsp GIT I & E</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
 
       </ul>
     </div>
   </nav>
-  <ul id="slide-out" class="side-nav fixed teal lighten-2">
+  <ul id="slide-out" class="side-nav fixed">
     <li>
       <div class="user-view">
         <div class="background">
@@ -71,11 +68,11 @@
         </center>
       </div>
     </li>
-    <li><a href="#!"><i class="material-icons">computer</i>Startups on Campus</a></li>
-    <li><a href="#!"><i class="material-icons">work</i>Incubation</a></li>
-    <li><a href="#!"><i class="material-icons">supervisor_account</i>Competitions</a></li>
-    <li><a href="#!"><i class="material-icons">cloud</i>Internship Tracker</a></li>
-    <li><a href="#!"><i class="material-icons">assistant</i>Patent filing assistance</a></li>
+    <li class="waves-effect"><a href="startups.html"><i class="material-icons">computer</i>Startups on Campus</a></li>
+    <li class="waves-effect active"><a href="incubation.html" id="incubation"><i class="material-icons">work</i>Incubation</a></li>
+    <li class="waves-effect"><a href="competitions.html"><i class="material-icons">supervisor_account</i>Competitions</a></li>
+    <li class="waves-effect"><a href="#!"><i class="material-icons">cloud</i>Internship Tracker</a></li>
+    <li class="waves-effect"><a href="patent.html"><i class="material-icons">assistant</i>Patent filing assistance</a></li>
     <li>
       <div class="divider"></div>
     </li>
@@ -83,9 +80,7 @@
   </ul>
 
   <div class="page-content">
-    <div class="">
-      some
-    </div>
+    <div id="main-content"></div>
   </div>
 
 </body>
@@ -107,4 +102,23 @@
     onOpen: function(el) { /* Do Stuff   */ }, // A function to be called when sideNav is opened
     onClose: function(el) { /* Do Stuff */ }, // A function to be called when sideNav is closed
   });
+  $(function() {    
+   $("#other").click(function() {
+     $('#result').load('new1.html');
+   });   
+ });
 </script>
+<script type="text/javascript"> 
+  $('#incubation').click(function(e) {
+                e.preventDefault(); // stops the default action of clicking on the link
+                var pageToLoad = $(this).attr('href'); // gets the href of the clicked link
+                $("#main-content").load(pageToLoad + " #main"); // loads the remote page into the content div without refresh
+              });
+            </script> 
+<script type="text/javascript"> 
+  $('#it_incubation').click(function(e) {
+    e.preventDefault(); // stops the default action of clicking on the link
+    var pageToLoad = $(this).attr('href'); // gets the href of the clicked link
+    $("#main-content").load(pageToLoad + " #main"); // loads the remote page into the content div without refresh
+  });
+</script> 
