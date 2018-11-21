@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Incubation</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <div id="main">
+    <br>
+    <div class="row">
+      <div class="col s12 m7">
+        <div class="card small hoverable">
+          <div class="card-image">
+            <img src="http://materializecss.com/images/sample-1.jpg">
+            <span class="card-title">IT Incubation Center</span>
+          </div>
+          <div class="card-content">
+            <p>IT Incubation Centre is open to anyone who wants to make a difference. We are here to promote entrepreneurial leadership across all disciplines, facilitate entrepreneurial activity amongst students, and invite entrepreneurs to use Incubation Center services so as to develop end products for commercialization.</p>
+          </div>
+          <div class="card-action">
+            <a href="it_incubation.html">Know more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col s12 m7">
+        <div class="card small hoverable">
+          <div class="card-image">
+            <img src="http://materializecss.com/images/sample-1.jpg">
+            <span class="card-title">NAIN Incubation Center</span>
+          </div>
+          <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively.</p>
+          </div>
+          <div class="card-action">
+            <a href="it_incubation.html" id="it_incubation">This is a link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col s12 m7">
+        <div class="card small hoverable">
+          <div class="card-image">
+            <img src="http://materializecss.com/images/sample-1.jpg">
+            <span class="card-title">Industry Institute Partnership Cell</span>
+          </div>
+          <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively.</p>
+          </div>
+          <div class="card-action">
+            <a href="#">This is a link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    
+  </div>
+  <script type="text/javascript"> 
+  $('#it_incubation').click(function(e) {
+                e.preventDefault(); // stops the default action of clicking on the link
+                var pageToLoad = $(this).attr('href'); // gets the href of the clicked link
+                $("html").parent().$("#main-content").load(pageToLoad + " #main"); // loads the remote page into the content div without refresh
+              });
+            </script> 
+</body>
+</html>
