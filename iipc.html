@@ -1,124 +1,392 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
+
 <head>
-	<!--Import Google Icon Font-->
-	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!--Import materialize.css-->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-	<meta charset="utf-8">
-	<meta name="theme-color" content="#4db6ac">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-	<!-- Add to homescreen for Chrome on Android -->
-	<meta name="mobile-web-app-capable" content="yes">
-	<link rel="icon" sizes="192x192" href="git.jpeg">
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#4db6ac">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="git.jpeg">
 
-	<!-- Add to homescreen for Safari on iOS -->
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-title" content="Material Design Lite">
-	<link rel="apple-touch-icon-precomposed" href="git.jpeg">
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+  <link rel="apple-touch-icon-precomposed" href="git.jpeg">
 
-	<!--Let browser know website is optimized for mobile-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title>My</title>
+
+
+  <link rel="shortcut icon" href="git.jpeg">
+  <link rel="stylesheet" href="manifest.json">
+
+  <title>GIT I&E</title>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style media="screen">
+    header, main, footer,.page-content,.navbar{
+    padding-left: 300px;
+  }
+  @media only screen and (max-width : 992px) {
+    header, main, footer,.page-content,.navbar {
+      padding-left: 0;
+    }
+  }
+  * {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+</style>
+
 </head>
+
 <body>
+  <div class="navbar-fixed">
+    <nav class="navbar">
+      <div class="nav-wrapper teal lighten-2">
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
 
-	<div style="padding-left: 25px; padding-right: 20px;" id="main">
-		<h3>INDUSTRY INSTITUTE PARTNERSHIP CELL (IIPC)</h3>
+        <a href="#" class="brand-logo"> &nbsp GIT I & E</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
 
-		<div class="divider"></div>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
-		<br>
-		<p>
-			<ul class="browser-default">
-				<li>Acts as liaison between Industry and the Institute.</li>
-				<li>Organizes     training     programmes     on     advanced     manufacturing     techniques, CAD/CAM/Casting software and technical topics.</li>
-				<li>Aids in the conduct of research work in various areas by providing facilities in the form of machines, software’s and computing facilities.</li>
-				<li>Aids in the conduct of project work for UG/PG students in various areas.</li>
-			</ul>
-		</p>
-		<p>It includes the following facilities:</p>
-		<p>
-			<strong>
-				<ul class="browser-default">
-					<li>A Flexible Manufacturing System  consisting of an XLMILL, XLTURN, AGV, AS/RS, Loading/Unloading Arms and a Central FMS controller.</li>
-					<li>A Reverse Engineering Lab consisting of a Coordinate Measuring Machine (CMM) and A Rapid Prototyping (FDM) machine</li>
-					<li>CADAM software training centre consisting of software’s like Autocast, Pro-e, UG-NX etc.</li>
-					<li>Fluid Power Lab consisting of Hydraulic circuits trainer kits.</li>
-				</ul>
-			</strong>
-		</p>
-		<p>
-			<strong>FLEXIBLE MANUFACTURING SYSTEM (FMS)</strong> is a production system consisting of a set of identical and/or complementary numerically controlled  machine which  are  connected  through  an  automated transportation  system.  Each process in FMS is controlled by a dedicated computer (FMS cell computer).
-		</p>
-		<p>
-			<ul class="browser-default">
-				<li>The work machines which are often automated CNC machines</li>
-				<li>Connected by a material handling system to optimize parts flow</li>
-				<li>A central control computer which controls material movements and machine functions.</li>
-			</ul>
-		</p>
-		<p>Flexible  Manufacturing  System  established  in  GIT  at  IIPC  consists  of  the  following equipments:</p>
-		<p><strong>
-			<ul class="browser-default">
-				<li>XLTURN</li>
-				<li>XLMILL</li>
-				<li>AS/RS</li>
-				<li>AGV</li>
-				<li>CENTRAL FMS CONTROL COMPUTER</li>
-			</ul>
-		</strong>
-	</p>
-	<p>
-		<strong>XLTURN</strong> is a two axes slant bed lathe machine with “MTAB CONTROLLER”. XLTURN   can   performs   drilling,   reaming,   pocketing,   grooving,   parting,   roughing   and chamfering of circular and rectangular work pieces, using CNC programming and operating. The XLTURN  is  specifically  designed  for  Education  and  Training,  and  is  manufactured  in accordance to the industrial standards. XLMILL is a three axes CNC bench-milling machine with “MTAB CONTROLLER”. XLMILL performs drilling, reaming, pocketing, roughing and chamfering the rectangular work pieces,  using  MTAB  controller.  The  <strong>XLMILL</strong>  is  specifically  designed  for  Education  and Training, and is manufactured in accordance to the industrial standards. <strong>ASRS (Automatic Storage & Retrieval System)</strong> consists of one or more storage aisles that are serviced by storage retrieval (S/R) machine. (The S/R machines are sometimes referred to as cranes). The aisles have storage racks for holding the storage materials. The S/R machines are used to deliver materials to the storage racks and to retrieve materials from racks. Each AS/RS aisles have one or more input/output stations where materials are delivered into the storage system or moved out of the system. The input/output stations are called pick-and-deposit (P&D) station in AS/RS terminology. P&D station can be manually operated or interfaced to some form of automated handling system such as a conveyor or an AGVS. <strong>AGV (Automatic Guided Vehicle)</strong> is a material handling mobile system that follows wires in  the  floor.  It  is  a  microcontroller  based  system  designed  to  be  compatible  with  FMS/CIM integration. The AGV transports the raw material from ASRS (Automatic 2Storage and Retrieval System) to the Manufacturing machines and return the finished jobs from the machines, back to the ASRS.
-	</p>
-	<p><strong>Aims of FMS</strong></p>
-	<p>
-		<ul class="browser-default">
-			<li>To reduce costs</li>
-			<li>Better utilization of the production equipment reduction of stocks (ex: Work in progress—capital shorter through put times)</li>
-			<li>Reduction of piece part unit costs</li>
-			<li>To increase Technical Performance</li>
-			<li>Increased production levels</li>
-			<li>Greater product mixture</li>
-			<li>Simultaneous product mixture manufacturing</li>
-			<li>Integration of the production system into the factory’s logistical system</li>
-			<li>Smaller batch sizes</li>
-			<li>Shorter or zero change over or reset of times</li>
-			<li>Shorter lead times/delivery times</li>
-			<li>Determination of production capacities</li>
-			<li>To assist future Corporate Security</li>
-			<li>Increased Competitiveness and Quality</li>
-		</ul>
-	</p>
+  <ul id="slide-out" class="side-nav fixed">
+    <li>
+      <div class="user-view">
+        <div class="background">
+          <img src="office.jpg">
+        </div>
+        <center>
+          <a href="#!user"><img class="circle" src="git.jpeg"></a>
+          <a href="#!name"><span class="white-text name" style="font-size:25px;">Welcome</span></a>
+        </center>
+      </div>
+    </li>
+    <li><a class="waves-effect" href="startups.html"><i class="material-icons">computer</i>Startups on Campus</a></li>
+    <li class="active"><a class="waves-effect" href="incubation.html" id="incubation"><i class="material-icons">work</i>Incubation</a></li>
+    <li><a class="waves-effect" href="competitions.html"><i class="material-icons">supervisor_account</i>Competitions</a></li>
+    <li><a class="waves-effect" href="http://internshiptracker.git.edu/students/"><i class="material-icons">cloud</i>Internship Tracker</a></li>
+    <li><a href="http://gitbelgaum.almaconnect.com/" id=""  class="waves-effect"><i class="material-icons">recent_actors</i>Connect with GIT Alumni</a></li>
 
-	<p>
-		<strong>REVERSE ENGINEERING SETUP</strong> In some situations, there may be a physical part/ product without any technical details, such as drawings, bills-of-material, or without engineering data. The process of duplicating an existing part, subassembly or product, without drawings, documentation, or a computer model is known as reverse engineering. Reverse engineering is also defined as the process of obtaining a geometric CAD model from 3-D points acquired by scanning/ digitizing existing parts/products. The Reverse Engineering stetup at GIT consists of:
-		<ol>
-			<li>Coordinate Measuring Machine</li>
-			<li>Rapid Prototyping (Fused Deposition Modelling) machine</li>
-		</ol>
-	</p>
-	<p>
-		A <strong>Coordinate Measuring Machine (CMM)</strong> is a device for measuring the physical geometrical characteristics of an object. This machine may be manually controlled by an operator or it may be computer controlled. Measurements are defined by a probe attached to the third moving axis of this machine.. A machine which takes readings in six degrees of freedom and displays these readings in mathematical form is known as a CMM. Rapid   Prototyping   machine   uses   Fused   Deposition   Modeling   (FDM),   an   additive manufacturing technique commonly used in the Rapid Prototyping (RP) industry to make parts. It is basically an additive process that layers the material together inorder to produce the finished prototype. A plastic coil is unwound through a heated nozzle, melting the material in the desired shape. One material is for support, while the other is for the 3D model itself. A 3D CAD file defines a calculated path for melted thermoplastics (print material) to travel and the model is built  up,  layer-by-layer,  which  is  eventually  cooled  into  a  solid.  In  this  process  different materials can be used to create custom finishes, effects, product specifications and appearance. This Leapfrog machine incorporates an FDM system which includes two nozzles, one for part material and other for support material. The support material is relatively weaker is strength and can be broken easily once the complete part is deposited and is removed from substrate. CADAM  (CENTERS  FOR  ADVANCED  DESIGN  AND  MANUFACTURING) TRAINING CENTER The CADAM program is a student mentoring program conceived with the idea of strengthening the foundation of the principles of engineering and ensuring that students learn practical requirements of the industry today and get a perspective on future technology and engineering trends. CADAM has been set up in collaboration with Quest Gobal to develop a high quality pool of employable talent among graduating engineers by ‘forward integrating’ them with its future work force. This is enabled by:
-		<ul class="browser-default">
-			<li>In-campus training of about 140 hours (3 months) for Final Year and pre-Final year engineering students for a batch size not exceeding 20</li>
-			<li>Advanced syllabus and content designed for direct application to industry</li>
-			<li>Training infrastructure and facility by institute</li>
-			<li>Residential trainer, syllabus, training methods and evaluation by QuEST</li>
-			<li>Employability to core industry by shortening lead time to be job-ready</li>
-			<li>Issuance of a joint completion certificate</li>
-		</ul>
-	</p>
-	<p>
-		<strong>FLUID POWER LAB</strong> Provides an insight into the principles of hydraulics and pneumatics. It helps the students to understand the important hydraulic and pneumatic components and their functions in the simple systems. Also, it intends to provide the students the knowledge about various hydraulic power generating devices and how to transmit and control it. In addition students will be able to draw and construct the hydraulic and pneumatic circuits to perform certain functions. Fluid  power  systems  easily  produce  linear  motion  using  hydraulic  or  pneumatic cylinders, whereas electrical and mechanical methods usually must use a mechanical device to convert rotational motion to linear. Fluid power systems generally can transmit equivalent power within a much smaller space than mechanical or electrical drives can, especially when extremely high force or torque is required. Fluid power systems also offer simple and effective control of direction, speed, force, and torque using simple control valves. Fluid power systems often do not require electrical power, which eliminates the risk of electrical shock, sparks, fire, and explosions.
-	</p>
+    <li><a class="waves-effect" href="patent.html"><i class="material-icons">assistant</i>Patent filing assistance</a></li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a class="waves-effect" href="aboutus.html"><i class="material-icons">people</i>About Us</a></li>
+  </ul>
 
+  <div class="page-content">
+    <div id="main-content">
+      <div style="padding-left: 25px; padding-right: 20px;" id="main">
+        <h4>INDUSTRY INSTITUTE PARTNERSHIP CELL (IIPC)</h4>
+
+        <div class="divider"></div>
+
+        <br>
+        <div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="Coordinate-Measuring-Machine.jpg" style="width:100%">
+    <div class="text">Coordinate Measuring Machine</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="FMS-setup-1024x683.jpg" style="width:100%">
+    <div class="text">FMS Setup</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="Rapid-Prototype-Machine-1024x683.jpg" style="width:100%">
+    <div class="text">Rapid prototype Machine</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
-<!-- Compiled and minified JavaScript -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+        <p>
+          <ul class="browser-default">
+            <li>Acts as liaison between Industry and the Institute.</li>
+            <li>Organizes training programmes on advanced manufacturing techniques, CAD/CAM/Casting software and technical topics.</li>
+            <li>Aids in the conduct of research work in various areas by providing facilities in the form of machines, software’s and computing facilities.</li>
+            <li>Aids in the conduct of project work for UG/PG students in various areas.</li>
+          </ul>
+        </p>
+        <p>It includes the following facilities:</p>
+        <p>
+          <strong>
+            <ul class="browser-default">
+              <li>A Flexible Manufacturing System consisting of an XLMILL, XLTURN, AGV, AS/RS, Loading/Unloading Arms and a Central FMS controller.</li>
+              <li>A Reverse Engineering Lab consisting of a Coordinate Measuring Machine (CMM) and A Rapid Prototyping (FDM) machine</li>
+              <li>CADAM software training centre consisting of software’s like Autocast, Pro-e, UG-NX etc.</li>
+              <li>Fluid Power Lab consisting of Hydraulic circuits trainer kits.</li>
+            </ul>
+          </strong>
+        </p>
+        <p>
+          <strong>FLEXIBLE MANUFACTURING SYSTEM (FMS)</strong> is a production system consisting of a set of identical and/or complementary numerically controlled machine which are connected through an automated transportation system. Each process
+          in FMS is controlled by a dedicated computer (FMS cell computer).
+        </p>
+        <p>
+          <ul class="browser-default">
+            <li>The work machines which are often automated CNC machines</li>
+            <li>Connected by a material handling system to optimize parts flow</li>
+            <li>A central control computer which controls material movements and machine functions.</li>
+          </ul>
+        </p>
+        <p>Flexible Manufacturing System established in GIT at IIPC consists of the following equipments:</p>
+        <p><strong>
+            <ul class="browser-default">
+              <li>XLTURN</li>
+              <li>XLMILL</li>
+              <li>AS/RS</li>
+              <li>AGV</li>
+              <li>CENTRAL FMS CONTROL COMPUTER</li>
+            </ul>
+          </strong>
+        </p>
+        <p>
+          <strong>XLTURN</strong> is a two axes slant bed lathe machine with “MTAB CONTROLLER”. XLTURN can performs drilling, reaming, pocketing, grooving, parting, roughing and chamfering of circular and rectangular work pieces, using CNC
+          programming and operating. The XLTURN is specifically designed for Education and Training, and is manufactured in accordance to the industrial standards. XLMILL is a three axes CNC bench-milling machine with “MTAB CONTROLLER”. XLMILL
+          performs drilling, reaming, pocketing, roughing and chamfering the rectangular work pieces, using MTAB controller. The <strong>XLMILL</strong> is specifically designed for Education and Training, and is manufactured in accordance to the
+          industrial standards. <strong>ASRS (Automatic Storage & Retrieval System)</strong> consists of one or more storage aisles that are serviced by storage retrieval (S/R) machine. (The S/R machines are sometimes referred to as cranes). The
+          aisles have storage racks for holding the storage materials. The S/R machines are used to deliver materials to the storage racks and to retrieve materials from racks. Each AS/RS aisles have one or more input/output stations where materials
+          are delivered into the storage system or moved out of the system. The input/output stations are called pick-and-deposit (P&D) station in AS/RS terminology. P&D station can be manually operated or interfaced to some form of automated
+          handling system such as a conveyor or an AGVS. <strong>AGV (Automatic Guided Vehicle)</strong> is a material handling mobile system that follows wires in the floor. It is a microcontroller based system designed to be compatible with
+          FMS/CIM integration. The AGV transports the raw material from ASRS (Automatic 2Storage and Retrieval System) to the Manufacturing machines and return the finished jobs from the machines, back to the ASRS.
+        </p>
+        <p><strong>Aims of FMS</strong></p>
+        <p>
+          <ul class="browser-default">
+            <li>To reduce costs</li>
+            <li>Better utilization of the production equipment reduction of stocks (ex: Work in progress—capital shorter through put times)</li>
+            <li>Reduction of piece part unit costs</li>
+            <li>To increase Technical Performance</li>
+            <li>Increased production levels</li>
+            <li>Greater product mixture</li>
+            <li>Simultaneous product mixture manufacturing</li>
+            <li>Integration of the production system into the factory’s logistical system</li>
+            <li>Smaller batch sizes</li>
+            <li>Shorter or zero change over or reset of times</li>
+            <li>Shorter lead times/delivery times</li>
+            <li>Determination of production capacities</li>
+            <li>To assist future Corporate Security</li>
+            <li>Increased Competitiveness and Quality</li>
+          </ul>
+        </p>
+
+        <p>
+          <strong>REVERSE ENGINEERING SETUP</strong> In some situations, there may be a physical part/ product without any technical details, such as drawings, bills-of-material, or without engineering data. The process of duplicating an existing
+          part, subassembly or product, without drawings, documentation, or a computer model is known as reverse engineering. Reverse engineering is also defined as the process of obtaining a geometric CAD model from 3-D points acquired by scanning/
+          digitizing existing parts/products. The Reverse Engineering stetup at GIT consists of:
+          <ol>
+            <li>Coordinate Measuring Machine</li>
+            <li>Rapid Prototyping (Fused Deposition Modelling) machine</li>
+          </ol>
+        </p>
+        <p>
+          A <strong>Coordinate Measuring Machine (CMM)</strong> is a device for measuring the physical geometrical characteristics of an object. This machine may be manually controlled by an operator or it may be computer controlled. Measurements
+          are defined by a probe attached to the third moving axis of this machine.. A machine which takes readings in six degrees of freedom and displays these readings in mathematical form is known as a CMM. Rapid Prototyping machine uses Fused
+          Deposition Modeling (FDM), an additive manufacturing technique commonly used in the Rapid Prototyping (RP) industry to make parts. It is basically an additive process that layers the material together inorder to produce the finished
+          prototype. A plastic coil is unwound through a heated nozzle, melting the material in the desired shape. One material is for support, while the other is for the 3D model itself. A 3D CAD file defines a calculated path for melted
+          thermoplastics (print material) to travel and the model is built up, layer-by-layer, which is eventually cooled into a solid. In this process different materials can be used to create custom finishes, effects, product specifications and
+          appearance. This Leapfrog machine incorporates an FDM system which includes two nozzles, one for part material and other for support material. The support material is relatively weaker is strength and can be broken easily once the complete
+          part is deposited and is removed from substrate. CADAM (CENTERS FOR ADVANCED DESIGN AND MANUFACTURING) TRAINING CENTER The CADAM program is a student mentoring program conceived with the idea of strengthening the foundation of the
+          principles of engineering and ensuring that students learn practical requirements of the industry today and get a perspective on future technology and engineering trends. CADAM has been set up in collaboration with Quest Gobal to develop a
+          high quality pool of employable talent among graduating engineers by ‘forward integrating’ them with its future work force. This is enabled by:
+          <ul class="browser-default">
+            <li>In-campus training of about 140 hours (3 months) for Final Year and pre-Final year engineering students for a batch size not exceeding 20</li>
+            <li>Advanced syllabus and content designed for direct application to industry</li>
+            <li>Training infrastructure and facility by institute</li>
+            <li>Residential trainer, syllabus, training methods and evaluation by QuEST</li>
+            <li>Employability to core industry by shortening lead time to be job-ready</li>
+            <li>Issuance of a joint completion certificate</li>
+          </ul>
+        </p>
+        <p>
+          <strong>FLUID POWER LAB</strong> Provides an insight into the principles of hydraulics and pneumatics. It helps the students to understand the important hydraulic and pneumatic components and their functions in the simple systems. Also, it
+          intends to provide the students the knowledge about various hydraulic power generating devices and how to transmit and control it. In addition students will be able to draw and construct the hydraulic and pneumatic circuits to perform
+          certain functions. Fluid power systems easily produce linear motion using hydraulic or pneumatic cylinders, whereas electrical and mechanical methods usually must use a mechanical device to convert rotational motion to linear. Fluid power
+          systems generally can transmit equivalent power within a much smaller space than mechanical or electrical drives can, especially when extremely high force or torque is required. Fluid power systems also offer simple and effective control
+          of direction, speed, force, and torque using simple control valves. Fluid power systems often do not require electrical power, which eliminates the risk of electrical shock, sparks, fire, and explosions.
+        </p>
+
+      </div>
+    </div>
 
 </body>
+
 </html>
+
+
+
+<script type="text/javascript">
+  // Initialize collapse button
+  $(".button-collapse").sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  //$('.collapsible').collapsible();
+  $('.button-collapse').sideNav({
+    menuWidth: 300, // Default is 300
+    edge: 'left', // Choose the horizontal origin
+    closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    draggable: true, // Choose whether you can drag to open on touch screens,
+    onOpen: function(el) { /* Do Stuff   */ }, // A function to be called when sideNav is opened
+    onClose: function(el) { /* Do Stuff */ }, // A function to be called when sideNav is closed
+  });
+  $(function() {
+    $("#other").click(function() {
+      $('#result').load('new1.html');
+    });
+  });
+</script>
+<script type="text/javascript">
+  $('#incubation').click(function(e) {
+    e.preventDefault(); // stops the default action of clicking on the link
+    var pageToLoad = "incubation.html"; // gets the href of the clicked link
+    $("#main").load(pageToLoad + " #main");
+     // loads the remote page into the content div without refresh
+  });
+
+
+
+  $('#it_incubation').click(function(e) {
+    e.preventDefault(); // stops the default action of clicking on the link
+    var pageToLoad = $(this).attr('href'); // gets the href of the clicked link
+    $("#main-content").load(pageToLoad + " #main"); // loads the remote page into the content div without refresh
+  });
+
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3500); // Change image every 2 seconds
+  }
+</script>

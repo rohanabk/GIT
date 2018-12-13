@@ -1,0 +1,17 @@
+header, main, footer,.page-content,.navbar{
+padding-left: 300px;
+}
+@media only screen and (max-width : 992px) {
+header, main, footer,.page-content,.navbar {
+  padding-left: 0;
+}
+}
+blockquote{
+border-color: #4db6ac;
+}
+a{
+color: #4db6ac;
+}
+.links{
+font-size: 18px;
+}

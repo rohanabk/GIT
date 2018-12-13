@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Incubation</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -11,6 +12,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
   <div id="main">
     <br>
@@ -18,7 +20,7 @@
       <div class="col s12 m7">
         <div class="card small hoverable">
           <div class="card-image">
-            <img src="http://materializecss.com/images/sample-1.jpg">
+            <img src="incubat-banner.jpg">
             <span class="card-title">IT Incubation Center</span>
           </div>
           <div class="card-content">
@@ -35,7 +37,7 @@
       <div class="col s12 m7">
         <div class="card small hoverable">
           <div class="card-image">
-            <img src="http://materializecss.com/images/sample-1.jpg">
+            <img src="Incubation-workspace.jpg">
             <span class="card-title">NAIN Incubation Center</span>
           </div>
           <div class="card-content">
@@ -52,11 +54,11 @@
       <div class="col s12 m7">
         <div class="card small hoverable">
           <div class="card-image">
-            <img src="http://materializecss.com/images/sample-1.jpg">
+            <img src="IIPC.jpg">
             <span class="card-title">Industry Institute Partnership Cell</span>
           </div>
           <div class="card-content">
-            <p>Acts as liaison between Industry and the Institute. Organizes     training     programmes     on     advanced     manufacturing     techniques, CAD/CAM/Casting software and technical topics.</p>
+            <p>Acts as liaison between Industry and the Institute. Organizes training programmes on advanced manufacturing techniques, CAD/CAM/Casting software and technical topics.</p>
           </div>
           <div class="card-action">
             <a href="iipc.html">Know More</a>
@@ -65,8 +67,15 @@
       </div>
     </div>
     <br>
-    
+
   </div>
-  
+   <script type="text/javascript">
+   $('#it_incubation').click(function(e) {
+                 e.preventDefault(); // stops the default action of clicking on the link
+                 var pageToLoad = $(this).attr('href'); // gets the href of the clicked link
+                 $("html").parent().$("#main-content").load(pageToLoad + " #main"); // loads the remote page into the content div without refresh
+               });
+  </script>
 </body>
+
 </html>
