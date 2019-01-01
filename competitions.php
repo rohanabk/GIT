@@ -30,8 +30,8 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
 
+  <link rel="stylesheet" href="styles.css">
 
 </head>
 
@@ -61,14 +61,14 @@
         </center>
       </div>
     </li>
-    <li><a  class="waves-effect" href="startups.html"><i class="material-icons">computer</i>Startups on Campus</a></li>
-    <li><a  class="waves-effect" href="incubation.html" id="incubation"><i class="material-icons">work</i>Incubation</a></li>
-    <li><a  class="waves-effect" href="competitions.php"><i class="material-icons">supervisor_account</i>Competitions</a></li>
+    <li><a class="waves-effect" href="startups.html"><i class="material-icons">computer</i>Startups on Campus</a></li>
+    <li><a class="waves-effect" href="incubation.html" id="incubation"><i class="material-icons">work</i>Incubation</a></li>
+    <li class="active"><a class="waves-effect" href="competitions.php"><i class="material-icons">supervisor_account</i>Competitions</a></li>
     <li><a href="proposal.php" class="waves-effect"><i class="material-icons">file_copy</i>Submit Proposal</a></li>
-    <li><a  class="waves-effect" href="http://internshiptracker.git.edu/students/" ><i class="material-icons">cloud</i>Internship Tracker</a></li>
-    <li><a href="http://gitbelgaum.almaconnect.com/" id=""  class="waves-effect"><i class="material-icons">recent_actors</i>Connect with GIT Alumni</a></li>
+    <li><a class="waves-effect" href="http://internshiptracker.git.edu/students/"><i class="material-icons">cloud</i>Internship Tracker</a></li>
+    <li><a href="http://gitbelgaum.almaconnect.com/" id="" class="waves-effect"><i class="material-icons">recent_actors</i>Connect with GIT Alumni</a></li>
 
-    <li class="active"><a  class="waves-effect" href="patent.html"><i class="material-icons">assistant</i>Patent filing assistance</a></li>
+    <li><a class="waves-effect" href="patent.html"><i class="material-icons">assistant</i>Patent filing assistance</a></li>
     <li>
       <div class="divider"></div>
     </li>
@@ -77,17 +77,33 @@
 
   <div class="page-content">
     <div id="main-content">
+      <?php
+      require './admin/init.php';
+      $res = mysqli_query($con, "SELECT * FROM competitions");
+      ?>
       <div style="padding-left: 25px; padding-right: 20px;" id="main">
 
-        <h5><blockquote>Do you have an idea that could change the world but none is aware of?
-        </blockquote></h5>
-        <p>We at GIT are happy to announce that the complete cost incurred during patent searching and filing (which normally costs around 2 lakhs to 2.7 lakhs ) will be funded by the college. We hope this will encourage students to innovate extensively.</p>
-        <p>
-          <h6>For Details contact</h6>
-          <strong>Dr. Vinayak Hosmani,</strong><br>
-          KLS Gogte Institute of Technology,<br>
-          Udyambag, Belagavi – 08<br>
-        </p>
+        <div class='row'>
+          <?php 
+          while ($row = mysqli_fetch_assoc($res)) {
+          ?>
+          <div class='col m6 s12'>
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" height="150px" width="100%" src="<?php echo $row['image']; ?>">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4"><?php echo $row['title']; ?><i class="material-icons right">more_vert</i></span>
+                <p><a href="<?php echo $row['link']; ?>" target="_blank">Participate</a></p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i><?php echo $row['title']; ?></span>
+                <p><?php echo $row['description']; ?></p>
+              </div>
+            </div>
+          </div>
+      <?php } ?>
+        </div>
       </div>
     </div>
   </div>
@@ -131,8 +147,4 @@
     var pageToLoad = $(this).attr('href'); // gets the href of the clicked link
     $("#main-content").load(pageToLoad + " #main"); // loads the remote page into the content div without refresh
   });
-
-
-
-
 </script>
